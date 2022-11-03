@@ -2,17 +2,19 @@ import math
 from array import *
 from pyde.de import DiffEvol
 
-x = 0
 
-c = -2 + 2j
+def fractalSolution():    
+    x = 0
 
-y = pow(x,3) + 2*c
+    c = -2 + 2j
 
-print("<=================>")
-b = 0
-f = open("coordinates.txt", "w")
-num=0
-while c.real <= 2 and c.imag >= -2:
+    y = pow(x,3) + 2*c
+
+    print("<=================>")
+    b = 0
+    f = open("coordinates.txt", "w")
+    num=0
+    while c.real <= 2 and c.imag >= -2:
 
         print(c)
 
@@ -47,3 +49,7 @@ while c.real <= 2 and c.imag >= -2:
 
         b = b + 1
         print(f'b:{b} ==========')
+        
+   
+fractalSolution()     
+        
